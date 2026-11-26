@@ -1,0 +1,39 @@
+{
+  "name": "slc",
+  "owner": { "name": "Social Lean Canvas" },
+  "metadata": { "description": "Agent tools for the Social Lean Canvas fleet: Polar, Better Auth, Cloudflare and the fleet's own rules." },
+  "plugins": [
+    {
+      "name": "slc",
+      "source": "./plugins/slc",
+      "description": "Owner rules, the issue form and the owner hand-off format for the SLC repos."
+    },
+    {
+      "name": "polar",
+      "source": { "source": "github", "repo": "polarsource/agent-toolkit" },
+      "description": "Polar's own plugin: the polar and polar-sandbox MCP servers and four skills."
+    },
+    {
+      "name": "better-auth",
+      "source": { "source": "github", "repo": "better-auth/skills" },
+      "description": "Better Auth's six skills and its documentation MCP server.",
+      "strict": false,
+      "skills": [
+        "./better-auth/best-practices",
+        "./better-auth/create-auth",
+        "./better-auth/emailAndPassword",
+        "./better-auth/organization",
+        "./better-auth/twoFactor",
+        "./security"
+      ],
+      "mcpServers": {
+        "better-auth": { "type": "http", "url": "https://mcp.better-auth.com/mcp" }
+      }
+    },
+    {
+      "name": "cloudflare",
+      "source": { "source": "github", "repo": "cloudflare/skills" },
+      "description": "Cloudflare's own plugin: platform skills and the Cloudflare API MCP server."
+    }
+  ]
+}
