@@ -40,10 +40,10 @@ Closes #
      "Should work" is not verification. -->
 
 ```
-npm run typecheck
-npm run lint
-npm test
+npm run check
 ```
+
+Add the repo's own build and dist checks from its `AGENTS.md`.
 
 ## Screen or preview
 

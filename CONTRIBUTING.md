@@ -37,4 +37,4 @@ as a last resort, an ad-hoc chore that serves neither and says so.
 
 ## Commands
 
-Each repository's `AGENTS.md` lists its commands and which of them must pass before a pull request.
+Every repository with a `package.json` has `npm run check`, which runs its typecheck, lint and tests. Each repository's `AGENTS.md` lists its other commands and which of them must pass before a pull request.
