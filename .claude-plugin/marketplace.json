@@ -1,10 +1,10 @@
 {
-  "name": "slc",
+  "name": "rowanyeoman-dev",
   "owner": {
-    "name": "Social Lean Canvas"
+    "name": "rowanyeoman-dev"
   },
   "metadata": {
-    "description": "Polar's and Better Auth's official agent tools, for the Social Lean Canvas fleet."
+    "description": "Agent plugins for the rowanyeoman-dev organisation: Polar's and Better Auth's official tools."
   },
   "plugins": [
     {
@@ -17,26 +17,8 @@
     },
     {
       "name": "better-auth",
-      "source": {
-        "source": "github",
-        "repo": "better-auth/skills"
-      },
-      "description": "Better Auth's six skills and its documentation MCP server.",
-      "strict": false,
-      "skills": [
-        "./better-auth/best-practices",
-        "./better-auth/create-auth",
-        "./better-auth/emailAndPassword",
-        "./better-auth/organization",
-        "./better-auth/twoFactor",
-        "./security"
-      ],
-      "mcpServers": {
-        "better-auth": {
-          "type": "http",
-          "url": "https://mcp.better-auth.com/mcp"
-        }
-      }
+      "source": "./plugins/better-auth",
+      "description": "Better Auth's official agent tools: six skills, two commands and the documentation MCP server."
     }
   ]
 }
