@@ -78,9 +78,7 @@ body:
       description: The exact commands that prove this works, and the output expected. "Tested manually" is not verification.
       value: |
         ```
-        npm run typecheck
-        npm run lint
-        npm test
+        npm run check
         ```
 
         Add the repo's own build and dist checks from its AGENTS.md.
