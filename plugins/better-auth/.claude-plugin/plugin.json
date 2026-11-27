@@ -1,0 +1,10 @@
+{
+  "name": "better-auth",
+  "version": "2026.9.1",
+  "description": "Better Auth's official agent tools: its six skills, its two commands and its documentation MCP server.",
+  "author": {
+    "name": "Better Auth"
+  },
+  "homepage": "https://better-auth.com/docs/ai-resources/skills",
+  "repository": "https://github.com/better-auth/skills"
+}

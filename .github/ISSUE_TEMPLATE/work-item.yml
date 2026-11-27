@@ -1,0 +1,104 @@
+name: Work item
+description: A scoped, verifiable unit of work.
+title: ""
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Keep this short.** State the problem, the scope, and how done is proven.
+
+        No history, no narrative, no restating decisions — link to them instead.
+        Every claim below must be checkable against the repository, not recalled from memory.
+
+        Set the issue **type** (Bug, Feature or Task) before submitting. Type is not a label here.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What needs to change and why. Two or three sentences. State the problem, not the story of how it was found.
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current state
+      description: What exists today, with evidence. File paths, commands, observed output. Facts only — no assumptions.
+      placeholder: |
+        - `src/index.ts:21` passes the request origin as the issuer.
+        - `npm test` → 41 pass, 1 fail.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What this issue changes. One bullet per deliverable.
+      value: |
+        - 
+        - 
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What this issue deliberately does not do. Name the issue that owns each item.
+      value: |
+        - 
+    validations:
+      required: true
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: Approach
+      description: How it will be built. Cite the official doc, existing code path, or ADR that governs the decision.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Checkbox list. Each item must be independently verifiable by someone who did not write the code.
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: The exact commands that prove this works, and the output expected. "Tested manually" is not verification.
+      value: |
+        ```
+        npm run typecheck
+        npm run lint
+        npm test
+        ```
+
+        Add the repo's own build and dist checks from its AGENTS.md.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        **Dependencies:** after creating the issue, set them with GitHub's issue relationships
+        (**Relationships** in the sidebar → **Mark as blocked by** / **Mark as blocking**), not in this body.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before submitting
+      options:
+        - label: Every claim above is checkable against the repository as it stands now.
+          required: true
+        - label: The issue type is set (Bug, Feature or Task).
+          required: true
