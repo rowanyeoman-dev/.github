@@ -52,6 +52,3 @@ Add the repo's own build and dist checks from its `AGENTS.md`.
 ## Risk and rollback
 
 <!-- What could break, and how to undo it. Write "None" only if that is true. -->
-
----
-_Status lives on the [Social Lean Canvas project board](https://github.com/orgs/rowanyeoman-dev/projects/1), not on this PR._
